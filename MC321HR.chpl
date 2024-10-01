@@ -9,14 +9,13 @@ use photonGeneratorR;
 
 // Define optical properties 
 mua = 1.0;                /* absorption coefficient [cm^-1] */
-config var mus = 20;               /* scattering coefficient [cm^-1] */
 albedo = mus / (mus+mua);
 g = 0.90;                 /* anisotropy [-] */
 nt = 1.33;                /* tissue index of refraction */
 radial_size = 3.0;        /* maximum radial size */
 
 // Define the number of grid and photon
-NR = 1000;                     /* number of radial positions */
+NR = 100;                     /* number of radial positions */
 dr= radial_size / NR;         // Radial bin size
 config const Nphotons = 1_000_000;       /* number of photons in simulation */
 

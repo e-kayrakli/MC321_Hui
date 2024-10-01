@@ -10,7 +10,7 @@ module photonGeneratorR {
 
     // Define optical properties (public variables)
     public config var mua: real;       // Absorption coefficient [cm^-1]
-    public var mus: real;      // Scattering coefficient [cm^-1]
+    config var mus = 20.0;      // Scattering coefficient [cm^-1]
     public var albedo: real;    // Albedo of tissue   
     public var g: real;        // Anisotropy [-]
     public var nt: real;       // Tissue index of refraction
