@@ -28,7 +28,7 @@ proc main() {
     var	Cpla: [0..NR] real;  /* planar      photon concentration CC[ir=0..100] */
 
     t.start();
-    forall i in 1..Nphotons {
+    forall i in 1..Nphotons with (+ reduce Csph, + reduce Ccyl, + reduce Cpla) {
         var RandGen = new randomStream(real,i); /* random number generator */
         var p = new photon(RandGen);
         do {
